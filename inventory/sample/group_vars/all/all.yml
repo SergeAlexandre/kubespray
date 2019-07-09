@@ -53,11 +53,14 @@ loadbalancer_apiserver_healthcheck_port: 8081
 # cloud_provider:
 
 ## Set these proxy values in order to update package manager and docker daemon to use proxies
-# http_proxy: ""
-# https_proxy: ""
+# docker_http_proxy: ""
+# docker_https_proxy: ""
+# yum_http_proxy: ""
+# yum_https_proxy: ""
 
 ## Refer to roles/kubespray-defaults/defaults/main.yml before modifying no_proxy
-# no_proxy: ""
+# docker_no_proxy: ""
+# yum_no_proxy: ""
 
 ## Some problems may occur when downloading files over https proxy due to ansible bug
 ## https://github.com/ansible/ansible/issues/32750. Set this variable to False to disable

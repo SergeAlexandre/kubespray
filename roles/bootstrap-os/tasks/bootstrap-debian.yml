@@ -21,14 +21,14 @@
   check_mode: false
   environment: {}
   when:
-    - http_proxy is defined
+    - apt_http_proxy is defined
 
-- name: Add http_proxy to /etc/apt/apt.conf if http_proxy is defined
-  raw: echo 'Acquire::http::proxy "{{ http_proxy }}";' >> /etc/apt/apt.conf
+- name: Add apt_http_proxy to /etc/apt/apt.conf if apt_http_proxy is defined
+  raw: echo 'Acquire::http::proxy "{{ apt_http_proxy }}";' >> /etc/apt/apt.conf
   become: true
   environment: {}
   when:
-    - http_proxy is defined
+    - apt_http_proxy is defined
     - need_http_proxy.rc != 0
 
 - name: Check https::proxy in /etc/apt/apt.conf

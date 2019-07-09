@@ -21,9 +21,9 @@ Variables are listed with their default values, if applicable.
 
 ### General variables
 
-  * `http_proxy`/`https_proxy`
+  * `xxx_http_proxy`/`xxx_https_proxy`
     The role will configure the package manager (if applicable) to download packages via a proxy.
-    This is currently implemented for CentOS/RHEL (`http_proxy` only) as well as Debian and Ubuntu (both `http_proxy` and `https_proxy` are respected)
+    This is currently implemented for CentOS/RHEL (`yum_http_proxy` only) as well as Debian and Ubuntu (both `apt_http_proxy` and `https_proxy` are respected)
 
   * `override_system_hostname: true`
     The role will set the hostname of the machine to the name it has according to Ansible's inventory (the variable `{{ inventory_hostname }}`).
